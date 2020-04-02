@@ -1,0 +1,133 @@
+---
+title: Quote
+seo_title:
+description:
+permalink: /quote/
+_disable_title_filename_sync: true
+---
+
+<p>Fill out the form below & we will get back to you as soon as possible with a quote.</p>
+
+<form class="quote-form" method="POST" action="{{ '/quote-thank-you/' | absolute_url }}">
+
+  <label class="text-bold" for="name-first">Name <span class="required">*</span></label>
+  <div class="row mb1">
+    <div class="one-half">
+      <input id="name-first" type="text" name="name-first" required>
+      <div class="label-more">
+        <p>First Name</p>
+      </div>
+    </div>
+    <div class="one-half">
+      <input id="name-last" type="text" name="name-last" required>
+      <div class="label-more">
+        <p>Last Name</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb2">
+    <div class="one-half">
+      <label class="text-bold" for="email">Email <span class="required">*</span></label>
+      <input id="email" type="email" name="_replyto" required>
+    </div>
+    <div class="one-half">
+      <label class="text-bold" for="phone">Phone Number <span class="required">*</span></label>
+      <input id="phone" type="text" name="phone" required>
+    </div>
+  </div>
+
+  <label class="text-bold" for="address">Address</label>
+  <input id="street" type="text" name="address">
+  <div class="label-more">
+    <p>Street</p>
+  </div>
+  <div class="row mb1 address">
+    <div class="6/12 address-city">
+      <input id="city" type="text" name="address" required>
+      <div class="label-more">
+        <p>City</p>
+      </div>
+    </div>
+    <div class="2/12 address-state">
+      <input id="state" type="text" name="address" required>
+      <div class="label-more">
+        <p>State</p>
+      </div>
+    </div>
+    <div class="4/12 address-zip">
+      <input id="zip" type="text" name="address" required>
+      <div class="label-more">
+        <p>Zip Code</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb2 quote-services">
+    <div class="one-half">
+      <label class="text-bold" for="service">Service Needed</label>
+      <div class="quote-services__row">
+        <input id="maintenance" type="checkbox" name="service" value="maintenance">
+        <label for="maintenance">Maintenance Cleaning</label><br>
+      </div>
+      <div class="quote-services__row">
+        <input id="one-time" type="checkbox" name="service" value="one-time">
+        <label for="one-time">One Time Cleaning</label><br>
+      </div>
+      <div class="quote-services__row">
+        <input id="moving" type="checkbox" name="service" value="moving">
+        <label for="moving">Moving Cleaning</label>
+      </div>
+      <div class="quote-services__row">
+        <input id="rental" type="checkbox" name="service" value="rental">
+        <label for="rental">Rental Cleaning</label>
+      </div>
+      <div class="quote-services__row">
+        <input id="other" type="checkbox" name="service" value="other">
+        <label for="other">Other (Please Specify Below)</label>
+      </div>
+    </div>
+    <div class="one-half">
+      <label class="text-bold" for="frequency">Frequency</label>
+      <div class="services__row">
+        <input id="one-time" type="checkbox" name="frequency" value="one-time">
+        <label for="one-time">One Time</label><br>
+      </div>
+      <div class="services__row">
+        <input id="weekly" type="checkbox" name="frequency" value="weekly">
+        <label for="weekly">Weekly</label><br>
+      </div>
+      <div class="services__row">
+        <input id="every-other-week" type="checkbox" name="frequency" value="every-other-week">
+        <label for="every-other-week">Every Other Week</label>
+      </div>
+      <div class="services__row">
+        <input id="other" type="checkbox" name="frequency" value="other">
+        <label for="other">Other (Please Specify Below)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb2">
+    <div class="one-third">
+      <label class="text-bold" for="bedrooms">Number of Bedrooms</label>
+      <input id="bedrooms" type="text" name="bedrooms">
+    </div>
+    <div class="one-third">
+      <label class="text-bold" for="bathrooms">Number of Bathrooms</label>
+      <input id="bathrooms" type="text" name="bathrooms">
+    </div>
+    <div class="one-third">
+      <label class="text-bold" for="square-footage">Approx. Square Footage</label>
+      <input id="square-footage" type="text" name="square-footage">
+    </div>
+  </div>
+
+  <label class="text-bold" for="additional-info">Additional Information</label>
+  <textarea rows="8" id="additional-info" class="w-100 mb2" name="additional-info"></textarea>
+
+  <input type="hidden" name="_to" value="sales@example.com,support@example.com">
+  <input type="text" name="_gotcha" style="display: none;">
+
+  <input type="submit" value="Send Message">
+</form>

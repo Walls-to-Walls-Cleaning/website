@@ -1,0 +1,66 @@
+.site-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 1rem;
+  @include breakpoint(lg) {
+    max-width: 48rem;
+  }
+  @include breakpoint(xl) {
+    max-width: 57rem;
+  }
+  @include breakpoint(xxl) {
+    max-width: 64rem;
+  }
+}
+
+.site-inner {
+  @extend %row;
+  position: relative;
+  flex: 1 0 auto;
+  background-color: #fff;
+}
+
+.main {
+  position: relative;
+  display: block; // Fixes IE bug on `main` element
+  width: 100%;
+  max-width: 100%;
+  @include breakpoint(lg) {
+    flex: 0 0 30rem;
+    // max-width: 30rem;
+  }
+  @include breakpoint(xl) {
+    flex: 0 0 39rem;
+    // max-width: 39rem;
+  }
+  @include breakpoint(xxl) {
+    flex: 0 0 43rem;
+    // max-width: 43rem;
+  }
+
+  &.full-width {
+    margin: 0 auto;
+    @include breakpoint(lg) {
+      flex: 0 0 43rem;
+      // max-width: 43rem;
+    }
+  }
+
+}
+
+.sidebar {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  @include breakpoint(lg) {
+    flex: 0 0 14rem;
+    // max-width: 14rem;
+  }
+  @include breakpoint(xxl) {
+    flex: 0 0 17rem;
+    // max-width: 17rem;
+  }
+}

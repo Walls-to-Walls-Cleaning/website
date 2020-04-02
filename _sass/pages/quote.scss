@@ -1,0 +1,46 @@
+.quote-form {
+
+  input[type='checkbox'] {
+    width: 1rem;
+  }
+
+  .label-more {
+    font-size: .9rem;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .required {
+    color: #b40000;
+  }
+
+  .address-city {
+    position: relative;
+    width: 100%;
+    @include breakpoint(md) {
+      flex: 0 0 calc((100% - 2rem) / (12 / 6));
+      max-width: calc((100% - 2rem) / (12 / 6));
+    }
+  }
+
+  .address-state {
+    position: relative;
+    width: 100%;
+    @include breakpoint(md) {
+      flex: 0 0 calc((100% - 2rem) / (12 / 2));
+      max-width: calc((100% - 2rem) / (12 / 2));
+    }
+  }
+
+  .address-zip {
+    position: relative;
+    width: 100%;
+    @include breakpoint(md) {
+      flex: 0 0 calc((100% - 2rem) / (12 / 4));
+      max-width: calc((100% - 2rem) / (12 / 4));
+    }
+  }
+
+}

@@ -1,0 +1,70 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size-base;
+  -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
+}
+
+body {
+  margin: 0;
+  font-family: $body-font;
+  line-height: 1.61803398875;
+  color: $body-text-color;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+  word-break: break-word;
+}
+
+// Add the correct font weight in Chrome, Edge, and Safari.
+b,
+strong {
+  font-weight: bolder;
+}
+
+
+a {
+  color: $primary-color;
+}
+
+
+ol,
+ul {
+  margin: 0 0 $spacer $spacer;
+  -webkit-padding-start: 0;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: $spacer 0 $spacer $spacer * 2;
+}
+
+li {
+  margin-bottom: $spacer / 2;
+}
+
+
+::-moz-selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+
+::selection {
+  color: #fff;
+  background-color: $primary-color;
+}

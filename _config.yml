@@ -1,0 +1,33 @@
+# Site Settings
+url:
+
+# Jekyll Configuration
+encoding: UTF-8
+permalink: /:title/
+
+# Markdown Processing
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Sass/SCSS Settings
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Collection Defaults
+defaults:
+- scope:
+    type: pages
+  values:
+    layout: page
+
+# Autoprefixer Plugin Settings - https://github.com/vwochnik/jekyll-autoprefixer
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: true
+
+# File Handling
+include: [_pages]
+exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]

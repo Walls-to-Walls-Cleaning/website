@@ -1,0 +1,118 @@
+.navigation {
+  @include breakpoint(md) {
+    display: flex;
+  }
+}
+
+.menu {
+  display: block;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: height .5s ease;
+  @include breakpoint(md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: inherit;
+  }
+}
+
+.menu-item {
+  position: relative;
+  display: block;
+  margin: 0;
+  text-align: center;
+  list-style: none;
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    color: $body-text-color;
+  }
+
+  a:hover,
+  &.active > a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  &:hover .sub-menu {
+    @include breakpoint(md) {
+      display: block;
+    }
+  }
+
+  + .menu-item {
+    margin-top: $spacer;
+    @include breakpoint(md) {
+      margin-top: 0;
+      margin-left: $spacer;
+    }
+  }
+
+}
+
+// Responsive Menu
+.responsive-menu-icon {
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto $spacer;
+  padding: .3rem .5rem;
+  font-size: .8rem;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  @include breakpoint(md) {
+    display: none;
+  }
+
+  &::after {
+    display: inline-block;
+    width: 1rem;
+    margin: 0 0 0 10px;
+    padding-bottom: 3px;
+    content: '';
+    border-top: 7px double;
+    border-top-width: 9px;
+    border-bottom: 2px solid;
+    border-bottom-width: 3px;
+  }
+}
+
+// .sub-menu-toggle {
+//   position: absolute;
+//   top: 10px;
+//   right: 0;
+//   display: block;
+//   padding: 6px 2px 0;
+//   visibility: visible;
+//   background: transparent;
+//   @include breakpoint(md) {
+//     display: none;
+//     visibility: hidden;
+//   }
+//
+//   &:hover {
+//     box-shadow: none;
+// 	}
+//
+//   &::before {
+//     padding: 14px 5px;
+//     font: normal 16px/1 'FontAwesome';
+//     color: $body-text-color;
+//     cursor: pointer;
+//     content: '\f078';
+//   }
+//
+//   &.activated::before {
+//     content: '\f077';
+//   }
+//
+// }

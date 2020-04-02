@@ -1,0 +1,11 @@
+menu-items:
+  - title: Home
+    url: /
+  - title: Vision
+    url: /vision/
+  - title: Services
+    url: /services/
+  - title: About
+    url: /about/
+  - title: Quote
+    url: /quote/

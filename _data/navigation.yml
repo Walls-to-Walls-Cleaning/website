@@ -9,3 +9,4 @@ menu-items:
     url: /about/
   - title: Quote
     url: /quote/
+    highlight: true

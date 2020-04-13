@@ -17,7 +17,7 @@
 }
 
 .site-inner {
-  @extend %row;
+  @extend .row; // in utilities.scss
   position: relative;
   flex: 1 0 auto;
   background-color: #fff;

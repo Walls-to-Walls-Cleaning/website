@@ -1,5 +1,5 @@
 .site-header {
-  @extend %row;
+  @extend .row; // in utilities.scss
   flex-direction: column;
   margin: $spacer * 2 0;
   @include breakpoint(md) {

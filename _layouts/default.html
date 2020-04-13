@@ -49,12 +49,6 @@
     {% if site.data.verification.bing_site_verification %}
       <meta name="msvalidate.01" content="{{ site.data.verification.bing_site_verification }}">
     {% endif %}
-    {% if site.data.verification.alexa_site_verification %}
-      <meta name="alexaVerifyID" content="{{ site.data.verification.alexa_site_verification }}">
-    {% endif %}
-    {% if site.data.verification.yandex_site_verification %}
-      <meta name="yandex-verification" content="{{ site.data.verification.yandex_site_verification }}">
-    {% endif %}
 
     {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
     {% unless jekyll.environment == 'production' %}<meta name="robots" content="noindex,nofollow">{% endunless %}
@@ -63,13 +57,13 @@
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.data.info.site_title }}" href="{{ '/feed.xml' | absolute_url }}">
 
-    {% if jekyll.environment == 'production' and site.data.tracking and page.tracking != false %}{{ site.data.tracking.head_code_block }}{% endif %}
+    {% if jekyll.environment == 'production' and site.data.tracking and page.do_not_track != true %}{{ site.data.tracking.head_code_block }}{% endif %}
 
   </head>
 
   <body {% if page.url == '/' %}class="home"{% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive"{% endif %}>
 
-    {% if jekyll.environment == 'production' and site.data.tracking and page.tracking != false %}{{ site.data.tracking.body_code_block }}{% endif %}
+    {% if jekyll.environment == 'production' and site.data.tracking and page.do_not_track != true %}{{ site.data.tracking.body_code_block }}{% endif %}
 
     <a class="screen-reader-text" href="#content">Skip to main content</a>
 
@@ -88,7 +82,7 @@
             <ul class="menu" data-collapsed="true">
               {% for menu-item in site.data.navigation.menu-items %}
                 <li class="menu-item{% if menu-item.url == page.url %} active{% endif %}">
-                  <a href="{{ menu-item.url }}"{% if menu-item.url == page.url %} aria-current="page"{% endif %} itemprop="url"><span itemprop="name">{{ menu-item.title }}</span></a>
+                  <a {% if menu-item.highlight %}class="button" {% endif %}href="{{ menu-item.url }}"{% if menu-item.url == page.url %} aria-current="page"{% endif %} itemprop="url"><span itemprop="name">{{ menu-item.title }}</span></a>
                 </li>
               {% endfor %}
             </ul>

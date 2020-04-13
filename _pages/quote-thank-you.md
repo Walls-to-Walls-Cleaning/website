@@ -2,7 +2,7 @@
 title: Thank You
 seo_title:
 description:
-permalink: /quote-thank-you/
+permalink: /form-thank-you/
 _disable_title_filename_sync: true
 ---
 

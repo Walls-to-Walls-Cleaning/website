@@ -6,9 +6,9 @@ permalink: /quote/
 _disable_title_filename_sync: true
 ---
 
-<p>Fill out the form below & we will get back to you as soon as possible with a quote.</p>
+<p>Fill out the form below & we will get back to you as soon as possible with a quote. Final price will be verified upon first cleaning</p>
 
-<form class="quote-form" method="POST" action="{{ '/quote-thank-you/' | absolute_url }}">
+<form class="quote-form" method="POST" action="{{ '/form-thank-you/' | absolute_url }}">
 
   <label class="text-bold" for="name-first">Name <span class="required">*</span></label>
   <div class="row mb1">
@@ -126,7 +126,7 @@ _disable_title_filename_sync: true
   <label class="text-bold" for="additional-info">Additional Information</label>
   <textarea rows="8" id="additional-info" class="w-100 mb2" name="additional-info"></textarea>
 
-  <input type="hidden" name="_to" value="brad@bradonomics.com,walls2wallscleaning@gmail.com">
+  <input type="hidden" name="_to" value="walls2wallscleaning@gmail.com">
   <input type="hidden" name="_subject" value="Walls Cleaning Quote Request">
   <input type="text" name="_gotcha" style="display: none;">
 

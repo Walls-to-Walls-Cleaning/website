@@ -1,11 +1,7 @@
-%row {
+.row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.row {
-  @extend %row;
 }
 
 .one-half {
@@ -43,6 +39,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
 }
 
 .w-100 {

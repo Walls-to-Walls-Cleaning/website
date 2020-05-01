@@ -3,7 +3,6 @@ title: Our Vision
 seo_title:
 description:
 permalink: /vision/
-_disable_title_filename_sync: true
 ---
 
 Serve---We believe it should be done your way. Our job is to make your life easier so you have time to

@@ -3,7 +3,6 @@ title: Contact Walls Cleaning Services
 seo_title: Contact Us
 description:
 permalink: /contact/
-_disable_title_filename_sync: true
 ---
 
 Phone:
@@ -48,5 +47,5 @@ Email:
   <input type="hidden" name="_subject" value="Walls Cleaning General Contact">
   <input type="text" name="_gotcha" style="display: none;">
 
-  <input type="submit" value="Send Message">
+  <button type="submit" name="button" value="Send Message">Send Message</button>
 </form>

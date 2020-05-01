@@ -3,7 +3,6 @@ title: About Walls Cleaning Services
 seo_title:
 description:
 permalink: /about/
-_disable_title_filename_sync: true
 ---
 
 Walls2Walls Cleaning has been in business for over 5 years. Owners, Sasha and Chris Walls, work

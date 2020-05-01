@@ -36,6 +36,7 @@ a {
 ol,
 ul {
   margin: 0 0 $spacer $spacer;
+  padding-left: 0;
   -webkit-padding-start: 0;
 }
 
@@ -52,6 +53,7 @@ ul ol,
 ol ol,
 ol ul {
   margin: $spacer 0 $spacer $spacer * 2;
+  list-style: circle;
 }
 
 li {

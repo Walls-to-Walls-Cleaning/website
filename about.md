@@ -2,6 +2,7 @@
 title: About Walls Cleaning Services
 seo_title:
 description:
+featured_image:
 permalink: /about/
 ---
 

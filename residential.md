@@ -2,8 +2,8 @@
 title: Residential
 seo_title:
 description:
+featured_image:
 permalink: /residential/
-_disable_title_filename_sync: true
 ---
 
 Happy Home is a Clean Home

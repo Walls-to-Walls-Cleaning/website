@@ -2,6 +2,7 @@
 title: Our Vision
 seo_title:
 description:
+featured_image:
 permalink: /vision/
 ---
 

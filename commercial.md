@@ -2,8 +2,8 @@
 title: Commercial
 seo_title:
 description:
+featured_image:
 permalink: /commercial/
-_disable_title_filename_sync: true
 ---
 
 - Janitorial

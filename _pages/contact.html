@@ -2,6 +2,8 @@
 title: Contact Walls Cleaning Services
 seo_title: Contact Us
 description:
+emails:
+  - walls2wallscleaning@gmail.com
 permalink: /contact/
 ---
 
@@ -43,7 +45,7 @@ Email:
   <label class="text-bold" for="message">Message</label>
   <textarea rows="8" id="message" class="w-100 mb2" name="message"></textarea>
 
-  <input type="hidden" name="_to" value="walls2wallscleaning@gmail.com">
+  <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
   <input type="hidden" name="_subject" value="Walls Cleaning General Contact">
   <input type="text" name="_gotcha" style="display: none;">
 

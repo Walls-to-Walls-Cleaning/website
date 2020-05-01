@@ -2,7 +2,7 @@ facebook:
   url: '#'
   app_id:
   publisher:
-default_image: # Open Graph/Twitter default site image
+default_image: '/images/default.jpg' # Open Graph/Twitter default site image
 twitter: '#'
 instagram_url: '#'
 tumblr_url: '#'

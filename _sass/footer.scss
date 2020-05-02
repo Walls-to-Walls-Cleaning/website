@@ -6,4 +6,17 @@
     margin-bottom: 0;
   }
 
+  .social-icon {
+    color: $body-text-color;
+
+    &:hover {
+      color: rgb(66, 103, 178);
+    }
+
+    svg {
+      max-width: .7rem;
+    }
+
+  }
+
 }

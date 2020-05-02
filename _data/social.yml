@@ -1,6 +1,6 @@
 default_image: '/images/default.jpg' # Open Graph/Twitter default site image
 facebook:
-  url:
+  url: https://www.facebook.com/wallscleaningservices/
   app_id:
   publisher:
 twitter:

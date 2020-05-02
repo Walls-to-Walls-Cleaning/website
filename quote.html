@@ -2,6 +2,9 @@
 title: Quote
 seo_title:
 description:
+emails:
+  - walls2wallscleaning@gmail.com
+email_subject: Walls Cleaning Quote Request
 featured_image:
 permalink: /quote/
 ---
@@ -126,8 +129,8 @@ permalink: /quote/
   <label class="text-bold" for="additional-info">Additional Information</label>
   <textarea rows="8" id="additional-info" class="w-100 mb2" name="additional-info"></textarea>
 
-  <input type="hidden" name="_to" value="walls2wallscleaning@gmail.com">
-  <input type="hidden" name="_subject" value="Walls Cleaning Quote Request">
+  <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
+  <input type="hidden" name="_subject" value="{{ page.email_subject }}">
   <input type="text" name="_gotcha" style="display: none;">
 
   <button type="submit" name="button" value="Send Message">Send Message</button>

@@ -4,6 +4,7 @@ seo_title: Contact Us
 description:
 emails:
   - walls2wallscleaning@gmail.com
+email_subject: Walls Cleaning General Contact
 featured_image:
 permalink: /contact/
 ---
@@ -47,7 +48,7 @@ Email:
   <textarea rows="8" id="message" class="w-100 mb2" name="message"></textarea>
 
   <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
-  <input type="hidden" name="_subject" value="Walls Cleaning General Contact">
+  <input type="hidden" name="_subject" value="{{ page.email_subject }}">
   <input type="text" name="_gotcha" style="display: none;">
 
   <button type="submit" name="button" value="Send Message">Send Message</button>

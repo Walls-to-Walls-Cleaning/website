@@ -31,3 +31,22 @@ autoprefixer:
 # File Handling
 # include: [_pages]
 exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]
+
+# CloudCannon Options
+_options:
+  layout:
+    hidden: true
+
+# CloudCannon Comment Defaults
+_comments:
+  title: Main headline of the page, also used in html title tag (required)
+  seo_title: Will overwrite the html title tag (not required)
+  description: Description text Google uses in search results
+  emails: Form recipients
+  email_subject: Form email subject
+  featured_image: Image used when sharing on Facebook (default image will be used if blank)
+  categories: Capitalize your categories (e.g. "Vacation Photos" "YouTube Video")
+  tags: Capitalize your tags (e.g. "Vacation Photos" "YouTube Video")
+  noindex: This tells Google (and other search engines) not to add this page to its index
+  permalink: Website address for this page
+  video_embed: Did you embed an video iframe?

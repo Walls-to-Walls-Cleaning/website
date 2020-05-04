@@ -1,0 +1,23 @@
+{
+  "name": "bedrock",
+  "description": "Bedrock Jekyll Template",
+  "version": "0.3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/webniyom/bedrock"
+  },
+  "author": "Brad West",
+  "engines": {
+    "node": ">= 12.16.1"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.9.1",
+    "onchange": "^7.0.2"
+  },
+  "scripts": {
+    "watch": "onchange 'js/*.js' -- npm run uglify",
+    "uglify": "uglifyjs js/navigation.js --compress --mangle --toplevel --output _includes/js/navigation.html",
+    "uglify:js-cookie": "uglifyjs node_modules/js-cookie/src/js.cookie.js --compress --mangle --output _includes/js/js-cookie.html",
+    "uglify:jquery": "uglifyjs node_modules/jquery/dist/jquery.js node_modules/js-cookie/src/js.cookie.js js/responsive-menu.js --compress --mangle --output js/bedrock.min.js"
+  }
+}

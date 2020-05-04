@@ -18,7 +18,7 @@ _disable_title_filename_sync: true
   <div class="row">
     {% for testimonial in site.data.testimonials | limit: 2 %}
       <div class="one-half testimonial">
-        <p>{{ testimonial.quote }}</p>
+        {{ testimonial.quote_text | markdownify }}
         <p class="text-bold text-center">{{ testimonial.name }}</p>
       </div>
     {% endfor %}

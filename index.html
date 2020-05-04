@@ -7,23 +7,24 @@ permalink: /
 _disable_title_filename_sync: true
 ---
 
-<p>We perform quality service for Residential and Commercial Properties.</p>
+<section class="intro editable">
+  <p>We perform quality service for Residential and Commercial Properties.</p>
+</section>
 
-<h2 class="mb2">What People Are Saying About Us</h2>
+<section class="testimonials mb2">
 
-<div class="row testimonials mb2">
+  <h2 class="mb2 editable">What People Are Saying About Us</h2>
 
-  <div class="one-half testimonial">
-    <p>I have never had a housekeeper before and wasn’t sure what to expect! It’s always been something I enjoyed doing myself so I was unsure what to think about asking someone into my home to clean. Sasha did a wonderful job cleaning my home the way I prefer! She came out to meet with me before hand and made sure she knew what I wanted and when and answered all of my silly questions. She cares a lot about the work she does and how important it is to her clients. We plan to have her our regularly now! What a wonderful help!</p>
-    <p class="text-bold text-center">Dani Latham</p>
+  <div class="row">
+    {% for testimonial in site.data.testimonials | limit: 2 %}
+      <div class="one-half testimonial">
+        <p>{{ testimonial.quote }}</p>
+        <p class="text-bold text-center">{{ testimonial.name }}</p>
+      </div>
+    {% endfor %}
   </div>
 
-  <div class="one-half testimonial">
-    <p>Walls2Walls is amazing!! I walked into a CLEAN house and was full of joy that she took such great care of everything that I’d asked of her. I walked into each room with a smile on my face. I am so grateful for Walls2Walls and I will definitely rely on her in the future!</p>
-    <p class="text-bold text-center">Jess M.</p>
-  </div>
-
-</div>
+</section>
 
 <div class="row mb2">
 
@@ -59,29 +60,41 @@ _disable_title_filename_sync: true
 
 </div>
 
-<h2 class="mb2">The Help you Need to Keep it Clean</h2>
+<section class="contact-options">
 
-<div class="row justify-content-evenly mb2">
-  <a class="button" href="{{ '/quote/' | absolute_url }}">Request a Quote</a>
-  <a class="button" href="{{ '/contact/' | absolute_url }}">Contact Us</a>
-</div>
+  <h2 class="mb2 editable">The Help you Need to Keep it Clean</h2>
 
-<div class="row">
-
-  <div class="one-half">
-    <h2>Commercial</h2>
-    <p>Office Cleaning</p>
-    <p>Janitorial Services</p>
+  <div class="row justify-content-evenly mb2">
+    <a class="button" href="{{ '/quote/' | absolute_url }}">Request a Quote</a>
+    <a class="button" href="{{ '/contact/' | absolute_url }}">Contact Us</a>
   </div>
 
-  <div class="one-half">
-    <h2>Residential</h2>
-    <p>House Cleaning</p>
-    <p>Apartment Cleaning</p>
-    <p>Move Out/Move In</p>
-    <p>Hospitality Clean Out for those AirBnB rentals!</p>
-    <p>Deep Clean or Initial Clean</p>
-    <p>Make Ready</p>
+</section>
+
+<section class="service-types">
+
+  <div class="row">
+
+    <div class="one-half">
+      <h2 class="editable">Commercial</h2>
+      <div class="editable">
+        <p>Office Cleaning</p>
+        <p>Janitorial Services</p>
+      </div>
+    </div>
+
+    <div class="one-half">
+      <h2 class="editable">Residential</h2>
+      <div class="editable">
+        <p>House Cleaning</p>
+        <p>Apartment Cleaning</p>
+        <p>Move Out/Move In</p>
+        <p>Hospitality Clean Out for those AirBnB rentals!</p>
+        <p>Deep Clean or Initial Clean</p>
+        <p>Make Ready</p>
+      </div>
+    </div>
+
   </div>
 
-</div>
+</section>

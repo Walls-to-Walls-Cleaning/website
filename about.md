@@ -2,7 +2,7 @@
 title: About Walls Cleaning Services
 seo_title:
 description:
-featured_image:
+featured_image: /uploads/chris-and-sasha.jpg
 permalink: /about/
 ---
 

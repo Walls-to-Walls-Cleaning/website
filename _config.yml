@@ -30,7 +30,7 @@ autoprefixer:
 
 # File Handling
 # include: [_pages]
-exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]
+exclude: [lib, config.rb, .sass-cache, .jekyll-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, package.json]
 
 # CloudCannon Options
 _options:

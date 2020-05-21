@@ -36,6 +36,20 @@ exclude: [lib, config.rb, .sass-cache, .jekyll-cache, Capfile, config, log, Rake
 _options:
   layout:
     hidden: true
+  content:
+    styles: /css/editor.css
+    format: p h2 h3 h4
+    left: alignleft
+    right: alignright
+    center: aligncenter
+    bold: true
+    italic: true
+    removeformat: true
+    link: true
+    blockquote: true
+    numberedlist: true
+    bulletedlist: true
+    image: true
 
 # CloudCannon Comment Defaults
 _comments:

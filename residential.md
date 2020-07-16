@@ -191,4 +191,4 @@ LIVING AREAS ROTATION: Doors and door frames hand wiped, Window sills and ledges
 
 KITCHEN: Counter tops cleaned, Outside of range hood cleaned, Top and front of range cleaned, Stove top, front, and sides, Sinks cleaned and chrome shined, Fronts of all appliances cleaned, Floors vacuumed and damp mopped, Window sills, ledges, and blinds dusted, Cobwebs removed, Microwave wiped out, Doors and door frames spot cleaned, General dusting
 
-KITCHEN ROTATING: Underneath of range hood cleaned, Drip pans or glass top surfaces cleaned, Doors and door frames hand wiped, Appliances cleaned and shined, Knickknack areas cleaned, Fronts of cabinets hand wiped, Baseboards and window sills hand wiped, Floors given extra attention, All kitchen furniture hand wiped![](/uploads/-walls2walls-logo-transparent-bg-main.png)
+KITCHEN ROTATING: Underneath of range hood cleaned, Drip pans or glass top surfaces cleaned, Doors and door frames hand wiped, Appliances cleaned and shined, Knickknack areas cleaned, Fronts of cabinets hand wiped, Baseboards and window sills hand wiped, Floors given extra attention, All kitchen furniture hand wiped

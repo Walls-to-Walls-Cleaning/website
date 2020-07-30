@@ -14,13 +14,13 @@
     {% elsif page.layout == 'page' or page.url == '/' %}
       {% assign page_title = page.title | normalize_whitespace | escape_once %}
     {% elsif page.layout == 'post' or page.url contains '/blog/' %}
-      {% assign page_title = page.title | normalize_whitespace | escape_once | append: ' by ' | append: site.data.info.site_title %}
+      {% assign page_title = page.title | normalize_whitespace | escape_once | append: ' by ' | append: site.data.site_info.site_title %}
     {% else %}
-      {% assign page_title = site.data.info.site_title | normalize_whitespace | escape_once %}
+      {% assign page_title = site.data.site_info.site_title | normalize_whitespace | escape_once %}
     {% endif %}
     <title>{{ page_title }}</title>
 
-    {% assign seo_description = page.description | default: site.data.info.site_description | strip_newlines | normalize_whitespace | escape_once %}
+    {% assign seo_description = page.description | default: site.data.site_info.site_description | strip_newlines | normalize_whitespace | escape_once %}
     <meta name="description" content="{{ seo_description }}">
 
     <meta property="og:title" content="{{ page_title }}">
@@ -58,9 +58,9 @@
 
     <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
 
-    <link rel="alternate" type="application/rss+xml" title="{{ site.data.info.site_title }}" href="{{ '/feed.xml' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.data.site_info.site_title }}" href="{{ '/feed.xml' | absolute_url }}">
 
-    {% if jekyll.environment == 'production' and site.data.tracking and page.tracking != false %}
+    {% if jekyll.environment == 'production' and site.data.tracking.head_code_block %}
       {{ site.data.tracking.head_code_block }}
     {% endif %}
 
@@ -68,7 +68,7 @@
 
   <body {% if page.url == '/' %}class="home"{% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive"{% endif %}>
 
-    {% if jekyll.environment == 'production' and site.data.tracking and page.tracking != false %}
+    {% if jekyll.environment == 'production' and site.data.tracking.body_code_block %}
       {{ site.data.tracking.body_code_block }}
     {% endif %}
 
@@ -79,7 +79,7 @@
       <header class="site-header" itemscope itemtype="https://schema.org/WPHeader">
 
           <div class="title-area">
-            <p class="site-title" itemprop="headline"><a href="{{ '/' | absolute_url }}"><img src="{{ '/images/logo.jpg' | absolute_url }}" alt="{{ site.data.info.site_title }}"></a></p>
+            <p class="site-title" itemprop="headline"><a href="{{ '/' | absolute_url }}">{{ site.data.site_info.site_title }}</a></p>
           </div>
 
           <nav class="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -104,7 +104,7 @@
       </div>
 
       <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <p itemprop="license">{{ site.data.info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; {% if site.data.social.facebook.url %}<a class="social-icon" href="{{ site.data.social.facebook.url }}"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a> &middot;{% endif %} <a href="{{ '/terms-conditions/' | absolute_url }}">Terms and Conditions</a> &middot; <a href="https://webniyom.com" rel="nofollow">Site by WebNiyom</a></p>
+        <p itemprop="license">{{ site.data.site_info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; {% if site.data.social.facebook.url %}<a class="social-icon" href="{{ site.data.social.facebook.url }}"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a> &middot;{% endif %} <a href="{{ '/terms-conditions/' | absolute_url }}">Terms and Conditions</a> &middot; <a href="https://webniyom.com" rel="nofollow">Site by WebNiyom</a></p>
       </footer>
 
     </div>

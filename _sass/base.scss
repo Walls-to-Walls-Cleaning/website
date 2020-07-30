@@ -8,11 +8,14 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  font-family: $body-font;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
   line-height: 1.61803398875;
   color: $body-text-color;
-  text-rendering: optimizeLegibility;
+  font-family: $body-font;
 }
 
 p {

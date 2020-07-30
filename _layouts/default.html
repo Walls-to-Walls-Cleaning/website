@@ -74,40 +74,40 @@
 
     <a class="screen-reader-text" href="#content">Skip to main content</a>
 
-    <div class="site-container">
+    <header class="site-header" itemscope itemtype="https://schema.org/WPHeader">
+      <div class="wrap">
 
-      <header class="site-header" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="title-area">
+          <p class="site-title" itemprop="headline"><a href="{{ '/' | absolute_url }}">{{ site.data.site_info.site_title }}</a></p>
+        </div>
 
-          <div class="title-area">
-            <p class="site-title" itemprop="headline"><a href="{{ '/' | absolute_url }}">{{ site.data.site_info.site_title }}</a></p>
-          </div>
+        <nav class="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 
-          <nav class="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <button class="responsive-menu-icon" aria-expanded="false">Menu</button>
 
-            <button class="responsive-menu-icon" aria-expanded="false">Menu</button>
+          <ul class="menu" data-collapsed="true">
+            {% for menu-item in site.data.navigation.menu-items %}
+              <li class="menu-item{% if menu-item.url == page.url %} active{% endif %}">
+                <a {% if menu-item.highlight %}class="button" {% endif %}href="{{ menu-item.url }}"{% if menu-item.url == page.url %} aria-current="page"{% endif %} itemprop="url"><span itemprop="name">{{ menu-item.title }}</span></a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
 
-            <ul class="menu" data-collapsed="true">
-              {% for menu-item in site.data.navigation.menu-items %}
-                <li class="menu-item{% if menu-item.url == page.url %} active{% endif %}">
-                  <a {% if menu-item.highlight %}class="button" {% endif %}href="{{ menu-item.url }}"{% if menu-item.url == page.url %} aria-current="page"{% endif %} itemprop="url"><span itemprop="name">{{ menu-item.title }}</span></a>
-                </li>
-              {% endfor %}
-            </ul>
-          </nav>
-
-      </header>
-
-      <div class="site-inner">
-        <main id="content" class="main{% unless page.sidebar_option == 'sidebar' %} full-width{% endunless %}">
-          {{ content }}
-        </main>
       </div>
+    </header>
 
-      <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
-        <p itemprop="license">{{ site.data.site_info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; {% if site.data.social.facebook.url %}<a class="social-icon" href="{{ site.data.social.facebook.url }}"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a> &middot;{% endif %} <a href="{{ '/terms-conditions/' | absolute_url }}">Terms and Conditions</a> &middot; <a href="https://webniyom.com" rel="nofollow">Site by WebNiyom</a></p>
-      </footer>
+    <main id="content" class="main">
+      {{ content }}
+    </main>
 
-    </div>
+    <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
+      <div class="wrap">
+
+        <p itemprop="license">{{ site.data.site_info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; {% if site.data.social.facebook.url %}<a class="social-icon" href="{{ site.data.social.facebook.url }}"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a> &middot;{% endif %} <a href="{{ '/terms-conditions/' | absolute_url }}">Terms and Conditions</a> &middot; Site by <a href="https://webniyom.com" rel="nofollow">WebNiyom</a></p>
+
+      </div>
+    </footer>
 
     {% include_cached scripts.html %}
 

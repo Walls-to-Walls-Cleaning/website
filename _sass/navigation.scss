@@ -2,15 +2,25 @@
   @include breakpoint(md) {
     display: flex;
   }
+
+  .button {
+    border-color: $body-text-color;
+
+    &:hover {
+      border-color: #fff;
+    }
+
+  }
+
 }
 
 .menu {
   display: block;
-  height: 0;
+  transition: height .5s ease;
   margin: 0;
+  height: 0;
   padding: 0;
   overflow: hidden;
-  transition: height .5s ease;
   @include breakpoint(md) {
     display: flex;
     flex-direction: row;
@@ -20,24 +30,24 @@
 }
 
 .menu-item {
-  position: relative;
   display: block;
+  position: relative;
   margin: 0;
-  text-align: center;
   list-style: none;
+  text-align: center;
   @include breakpoint(md) {
     display: flex;
     align-items: center;
   }
 
   a {
+    text-decoration: none;
     color: $body-text-color;
   }
 
   a:hover,
   &.active > a {
-    color: $primary-color;
-    text-decoration: none;
+    color: #fff;
   }
 
   &:hover .sub-menu {

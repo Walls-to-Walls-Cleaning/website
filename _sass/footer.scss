@@ -1,9 +1,22 @@
 .site-footer {
-  margin: $spacer * 2 0;
+  position: relative;
+  margin: ($spacer * 2) auto 0;
+  width: 100%;
+  background-color: $primary-color;
+  padding: ($spacer * 2) 0;
   text-align: center;
+
+  .wrap {
+    @extend %row; // in utilities.scss
+    flex-direction: column;
+  }
 
   p {
     margin-bottom: 0;
+  }
+
+  a {
+    color: $body-text-color;
   }
 
   .social-icon {

@@ -4,7 +4,7 @@
   }
 
   .button {
-    border-color: $body-text-color;
+    border-color: #fff;
 
     &:hover {
       border-color: #fff;
@@ -42,7 +42,7 @@
 
   a {
     text-decoration: none;
-    color: $body-text-color;
+    color: #fff;
   }
 
   a:hover,
@@ -72,17 +72,17 @@
 
 // Responsive Menu
 .responsive-menu-icon {
-  z-index: 999;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  z-index: 999;
   margin: 0 auto $spacer;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
   padding: .3rem .5rem;
   font-size: .8rem;
-  cursor: pointer;
-  background-color: #fff;
-  border: 1px solid $primary-color;
-  border-radius: 5px;
   @include breakpoint(md) {
     display: none;
   }

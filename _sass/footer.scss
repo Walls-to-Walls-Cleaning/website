@@ -2,7 +2,7 @@
   position: relative;
   margin: ($spacer * 2) auto 0;
   width: 100%;
-  background-color: $primary-color;
+  background-color: $secondary-color;
   padding: ($spacer * 2) 0;
   text-align: center;
 
@@ -13,14 +13,15 @@
 
   p {
     margin-bottom: 0;
+    color: #fff;
   }
 
   a {
-    color: $body-text-color;
+    color: #fff;
   }
 
   .social-icon {
-    color: $body-text-color;
+    color: #fff;
 
     &:hover {
       color: rgb(66, 103, 178);

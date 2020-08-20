@@ -10,7 +10,7 @@ permalink: /quote/
 ---
 
 <div class="editable">
-  <p>Fill out the form below & we will get back to you as soon as possible with a quote. Final price will be verified upon first cleaning</p>  
+  <p>Fill out the form below & we will get back to you as soon as possible with a quote. Final price will be verified upon first cleaning</p>
 </div>
 
 <form class="quote-form" method="POST" action="{{ '/form-thank-you/' | absolute_url }}">
@@ -69,48 +69,51 @@ permalink: /quote/
   </div>
 
   <div class="row mb2 quote-services">
-    <div class="one-half">
-      <label class="text-bold" for="service">Service Needed</label>
-      <div class="quote-services__row">
-        <input id="maintenance" type="checkbox" name="service" value="maintenance">
-        <label for="maintenance">Maintenance Cleaning</label><br>
+
+      <div class="one-half">
+        <label class="text-bold" for="service">Service Needed</label>
+        <div class="quote-services__row">
+          <input id="maintenance" type="checkbox" name="service" value="maintenance">
+          <label for="maintenance">Maintenance Cleaning</label><br>
+        </div>
+        <div class="quote-services__row">
+          <input id="one-time-cleaning" type="checkbox" name="service" value="one-time-cleaning">
+          <label for="one-time-cleaning">One Time Cleaning</label><br>
+        </div>
+        <div class="quote-services__row">
+          <input id="moving" type="checkbox" name="service" value="moving">
+          <label for="moving">Moving Cleaning</label>
+        </div>
+        <div class="quote-services__row">
+          <input id="rental" type="checkbox" name="service" value="rental">
+          <label for="rental">Rental Cleaning</label>
+        </div>
+        <div class="quote-services__row">
+          <input id="other-service" type="checkbox" name="service" value="other-service">
+          <label for="other-service">Other (Please Specify Below)</label>
+        </div>
       </div>
-      <div class="quote-services__row">
-        <input id="one-time" type="checkbox" name="service" value="one-time">
-        <label for="one-time">One Time Cleaning</label><br>
+
+      <div class="one-half">
+        <label class="text-bold" for="frequency">Frequency</label>
+        <div class="services__row">
+          <input id="one-time" type="checkbox" name="frequency" value="one-time">
+          <label for="one-time">One Time</label><br>
+        </div>
+        <div class="services__row">
+          <input id="weekly" type="checkbox" name="frequency" value="weekly">
+          <label for="weekly">Weekly</label><br>
+        </div>
+        <div class="services__row">
+          <input id="every-other-week" type="checkbox" name="frequency" value="every-other-week">
+          <label for="every-other-week">Every Other Week</label>
+        </div>
+        <div class="services__row">
+          <input id="other-frequency" type="checkbox" name="frequency" value="other-frequency">
+          <label for="other-frequency">Other (Please Specify Below)</label>
+        </div>
       </div>
-      <div class="quote-services__row">
-        <input id="moving" type="checkbox" name="service" value="moving">
-        <label for="moving">Moving Cleaning</label>
-      </div>
-      <div class="quote-services__row">
-        <input id="rental" type="checkbox" name="service" value="rental">
-        <label for="rental">Rental Cleaning</label>
-      </div>
-      <div class="quote-services__row">
-        <input id="other" type="checkbox" name="service" value="other">
-        <label for="other">Other (Please Specify Below)</label>
-      </div>
-    </div>
-    <div class="one-half">
-      <label class="text-bold" for="frequency">Frequency</label>
-      <div class="services__row">
-        <input id="one-time" type="checkbox" name="frequency" value="one-time">
-        <label for="one-time">One Time</label><br>
-      </div>
-      <div class="services__row">
-        <input id="weekly" type="checkbox" name="frequency" value="weekly">
-        <label for="weekly">Weekly</label><br>
-      </div>
-      <div class="services__row">
-        <input id="every-other-week" type="checkbox" name="frequency" value="every-other-week">
-        <label for="every-other-week">Every Other Week</label>
-      </div>
-      <div class="services__row">
-        <input id="other" type="checkbox" name="frequency" value="other">
-        <label for="other">Other (Please Specify Below)</label>
-      </div>
-    </div>
+
   </div>
 
   <div class="row mb2">

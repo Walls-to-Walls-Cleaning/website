@@ -1,29 +1,26 @@
 ---
-title: Contact Walls Cleaning Services
-seo_title: Contact Us
+title: Contact
+seo_title:
 description:
-emails:
-  - walls2wallscleaning@gmail.com
-email_subject: Walls Cleaning General Contact
 featured_image:
+intro_text:
+emails:
+  - info@webniyom.com
+email_subject: New Contact
+success_redirect_url: /form-thank-you/
 permalink: /contact/
+_disable_title_filename_sync: true
 ---
 
-<form class="quote-form" method="POST" action="{{ '/quote-thank-you/' | absolute_url }}">
+<form class="form" method="POST" action="{{ page.success_redirect_url }}">
 
   <label class="text-bold" for="name-first">Name <span class="required">*</span></label>
   <div class="row mb1">
     <div class="one-half">
-      <input id="name-first" type="text" name="name-first" required>
-      <div class="label-more">
-        <p>First Name</p>
-      </div>
+      <input id="name-first" type="text" name="name-first" placeholder="First Name" required>
     </div>
     <div class="one-half">
-      <input id="name-last" type="text" name="name-last" required>
-      <div class="label-more">
-        <p>Last Name</p>
-      </div>
+      <input id="name-last" type="text" name="name-last" placeholder="Last Name" required>
     </div>
   </div>
 
@@ -45,5 +42,5 @@ permalink: /contact/
   <input type="hidden" name="_subject" value="{{ page.email_subject }}">
   <input type="text" name="_gotcha" style="display: none;">
 
-  <input type="submit" value="Send Message">
+  <input class="primary" type="submit" value="Send Message">
 </form>

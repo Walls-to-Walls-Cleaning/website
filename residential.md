@@ -2,7 +2,8 @@
 title: Residential
 seo_title:
 description:
-featured_image:
+featured_image: /uploads/sink.jpg
+intro_text:
 permalink: /residential/
 ---
 

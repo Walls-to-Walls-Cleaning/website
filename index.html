@@ -1,83 +1,118 @@
 ---
-title: Walls Cleaning Service LLC
+layout: default
+title: Huntsville Cleaning Services
 seo_title:
-description:
-featured_image: /uploads/82324207-846297875840186-2707255690694492160-n.png
+description: Commercial and residential cleaning services for the Huntsville and Madison Alabama area.
+intro_text: Commercial and residential cleaning services for the Huntsville and Madison Alabama area.
+intro_button_url:
+intro_button_text:
+intro_image: /uploads/chris-and-sasha-small.jpg
+featured_image:
+page_blocks:
+  - _id: entry_content
+    entry_content:
+      - image: /uploads/diluth-cleaning.jpg
+        title: Commercial Cleaning Services
+        text_html: >-
+          <p>Learn more about how we can help you with commercial janitorial services.</p>
+        button:
+          text: Learn More
+          link: '/commercial/'
+          button_style: primary
+      - image: /uploads/sink.jpg
+        title: Residential Cleaning Services
+        text_html: >-
+          <p>A happy home is a clean home. Learn more about how we can help keep your home clean.</p>
+        button:
+          text: Learn More
+          link: '/residential/'
+          button_style: primary
+  - _id: features
+    features:
+      - icon: comments
+        title: Serve
+        text_html: >-
+          <p>We believe it should be done your way. Our job is to make your life easier so you have time to enjoy what matters most. Let us know how we can serve you better!</p>
+      - icon: shield-alt
+        title: Trust
+        text_html: >-
+          <p>Cleaning is more personal than many services, we work to establish a dedicated Cleaning Specialist for your property. The cleaners coming into your home or business will treat your home and belongings with care and concern. You can trust us to leave your home better than we found it.</p>
+      - icon: trophy
+        title: Excellence
+        text_html: >-
+          <p>We pride ourselves on a job well done, we want you to take pride in it too. Your recommendation is the best compliment we can receive. Our excellent service to you and your family is the only way to earn that compliment.</p>
+      - icon: hourglass
+        title: Professionalism
+        text_html: >-
+          <p>Your time is valuable. When you use your time preparing for us to clean, we take that seriously. We show up on time, ready to work. Getting our job done with efficiently and promptly gives you more time to do the things you love.</p>
+      - icon: puzzle-piece
+        title: Community
+        text_html: >-
+          <p>We live and work here too. Helping to provide work opportunities and cleaning services builds the community. Giving back to the community not only betters others lives but gives us the opportunity to better ourselves.</p>
 permalink: /
 _disable_title_filename_sync: true
 ---
 
-<section class="intro editable">
-      <p><em>The Help You Need To Keep It Clean.<img src="/uploads/82324207-846297875840186-2707255690694492160-n.png" width="940" height="788" /></em></p>
-    </section>
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 
-{% comment %}
-<section class="testimonials mb2">
-
-  <h2 class="mb2 editable">
-    What People Are Saying About Us
-  </h2>
-
-  <div class="row">
-    {% for testimonial in site.data.testimonials | limit: 2 %}
-      <div class="one-half testimonial">
-        {{ testimonial.quote_text | markdownify }}
-        <p class="text-bold text-center">{{ testimonial.name }}</p>
-      </div>
-    {% endfor %}
-  </div>
-
-</section>
-{% endcomment %}
-
-<section class="contact-options">
-
-  <h2 class="mb2 editable">
-    
-  </h2>
-
-  <div class="row justify-content-evenly mb2">
-    <a class="button" href="{{ '/quote/' | absolute_url }}">Request a Quote</a>
-    <a class="button" href="{{ '/contact/' | absolute_url }}">Contact Us</a>
-  </div>
-
-</section>
-
-<section class="service-types">
-
-  <div class="row">
-
-    <div class="one-half">
-      <h2 class="editable">
-        Commercial
-      </h2>
-      <div class="editable">
-        <p>Office Cleaning</p>
-        <p>Janitorial Services</p>
-        <p>Post Construction cleaning</p>
-        <p>Retail Cleaning</p>
-        <p>White Glove Inspection Cleaning</p>
-        <p>Covid 19 Misting / sanitization</p>
-        <p><img src="/uploads/diluth-cleaning-1.jpg" width="1343" height="640" /></p>
-        <p>&nbsp;</p>
-      </div>
+  <header class="page__header">
+    <div class="page__header-content">
+      <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+      {% if page.intro_text %}<p>{{ page.intro_text }}</p>{% endif %}
+      {% if page.intro_button_url %}<a class="button primary" href="{{ page.intro_button_url }}">{{ page.intro_button_text }}</a>{% endif %}
     </div>
-
-    <div class="one-half">
-      <h2 class="editable">
-        Residential
-      </h2>
-      <div class="editable">
-        <p>House Cleaning</p>
-        <p>Apartment Cleaning</p>
-        <p>Move Out/Move In</p>
-        <p>Hospitality Clean Out for those AirBnB rentals!</p>
-        <p>Deep Clean&nbsp;</p>
-        <p>Make Ready</p>
-        <p><img src="/uploads/sink.jpg" width="960" height="640" /></p>
-      </div>
+    <div class="page__header-image">
+      <img src="{{ page.intro_image }}" alt="{{ page.title }}">
     </div>
+  </header>
 
-  </div>
+  {% for block in page.page_blocks %}
+    {% case block._id %}
+      {% when 'entry_content' %}
+        <div class="spotlight archive">
+          {% for entry in block.entry_content %}
+            <div class="entry">
+              <div class="entry__image background-image{% cycle '', ' reverse' %}" style="background-image:url('{{ entry.image }}')"></div>
+              <div class="entry__content">
+                <h2>{{ entry.title }}</h2>
+                {{ entry.text_html }}
+                {% if entry.button.link %}<a href="{{ entry.button.link }}" class="button {{entry.button.button_style }}">{{ entry.button.text }}</a>{% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% when 'features' %}
+        <div class="features">
+          {% for feature in block.features %}
+            <div class="feature">
+              <div class="icon">
+                {% include icons.html icon=feature.icon %}
+              </div>
+              <h2>{{ feature.title }}</h2>
+              {{ feature.text_html }}
+            </div>
+          {% endfor %}
+        </div>
+      {% when 'cta' %}
+        <div class="cta">
+          <div class="cta__inner">
 
-</section>
+            <div class="cta__content">
+              <h2 class="cta__title">{{ block.title }}</h2>
+              {{ block.description_html }}
+            </div>
+
+            {% unless block.buttons == empty %}
+              <div class="cta__actions">
+                {% for button in block.buttons %}
+                  <a href="{{ button.link }}" class="button large fit{% if button.button_style == 'primary' %} primary{% endif %}">{{ button.text }}</a>
+                {% endfor %}
+              </div>
+            {% endunless %}
+
+          </div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+
+</article>

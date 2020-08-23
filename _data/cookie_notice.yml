@@ -1,0 +1,3 @@
+display_cookie_notice: false
+notice_text: 'By using our website, you agree to our <a href="/cookie-policy/">cookie policy</a>.'
+button_text: 'Accept'

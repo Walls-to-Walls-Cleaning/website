@@ -1,15 +1,19 @@
 ---
+published: false
 layout: default
+title: Blog
+seo_title:
+description:
+featured_image:
 pagination:
   enabled: true
-sitemap: false
-noindex: true
+permalink: /blog/
 ---
 
 <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
 
   <div class="archive-description">
-    <h1 class="archive-title" itemprop="headline">{{ page.title | capitalize_all }}</h1>
+    <h1 class="archive-title" itemprop="headline">{{ page.title }}</h1>
   </div>
 
   {% for post in paginator.posts %}

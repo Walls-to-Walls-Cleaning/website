@@ -1,12 +1,18 @@
-menu-items:
-  - title: Home
-    url: /
-  - title: Vision
-    url: /vision/
-  - title: Services
-    url: /services/
-  - title: About
-    url: /about/
-  - title: Quote
-    url: /quote/
-    highlight: true
+- title: Home
+  url: /
+  featured: false
+- title: About
+  url: /about/
+  featured: false
+- title: Commercial
+  url: /commercial/
+  featured: false
+- title: Residential
+  url: /residential/
+  featured: false
+- title: Contact
+  url: /contact/
+  featured: false
+- title: Get Quote
+  url: /quote/
+  featured: true

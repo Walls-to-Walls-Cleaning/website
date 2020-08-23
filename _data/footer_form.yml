@@ -1,0 +1,8 @@
+show_form: false
+title: Get in touch
+description_html: >-
+  <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus ferment. Pellentesque a diam sit amet amet dolor ullamcorper vehicula. Lorem ipsum dolor sit amet dolor sit amet consequat.</p>
+emails:
+  - walls2wallscleaning@gmail.com
+email_subject: New Contact
+success_redirect_url: /form-thank-you/

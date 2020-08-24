@@ -3,9 +3,9 @@
   {% if site.data.footer_form.show_form %}
     {% unless page.emails %}
 
-      <p class="site-footer__header">{{ site.data.footer_form.title }}</p>
+      <p class="site-footer__header">{{ site.data.footer_form.form_title }}</p>
 
-      {{ site.data.footer_form.description_html }}
+      {{ site.data.footer_form.text_html }}
 
       <form method="post" action="{{ site.data.footer_form.success_redirect_url }}">
 

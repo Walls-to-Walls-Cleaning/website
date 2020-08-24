@@ -15,7 +15,7 @@ _disable_title_filename_sync: true
 <form class="form" method="POST" action="{{ page.success_redirect_url }}">
 
   <label class="text-bold" for="name-first">Name <span class="required">*</span></label>
-  <div class="row mb1">
+  <div class="row mb-1">
     <div class="one-half">
       <input id="name-first" type="text" name="name-first" placeholder="First Name" required>
     </div>
@@ -24,7 +24,7 @@ _disable_title_filename_sync: true
     </div>
   </div>
 
-  <div class="row mb2">
+  <div class="row mb-2">
     <div class="one-half">
       <label class="text-bold" for="email">Email <span class="required">*</span></label>
       <input id="email" type="email" name="_replyto" required>
@@ -36,7 +36,7 @@ _disable_title_filename_sync: true
   </div>
 
   <label class="text-bold" for="message">Message</label>
-  <textarea rows="8" id="message" class="w-100 mb2" name="message"></textarea>
+  <textarea rows="8" id="message" class="w-100 mb-2" name="message"></textarea>
 
   <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
   <input type="hidden" name="_subject" value="{{ page.email_subject }}">

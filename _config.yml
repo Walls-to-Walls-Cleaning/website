@@ -22,3 +22,81 @@ defaults:
       type: pages
     values:
       layout: page
+
+# Page Blocks
+_array_structures:
+  page_blocks:
+    - label: Entry Content
+      icon: ballot
+      value:
+        _id: entry_content
+        entry_content: []
+    - label: Features
+      icon: folder_special
+      value:
+        _id: features
+        features: []
+    - label: Call To Action
+      icon: campaign
+      value:
+        _id: cta
+        title:
+        description_html:
+        buttons: []
+  buttons:
+    - label: Button
+      icon: link
+      value:
+        text: Button Text
+        link: '#'
+        button_style: primary
+  entry_content:
+    - label: Entry Content
+      icon: ballot
+      value:
+        image:
+        title:
+        text_html:
+        button:
+          text: Button Text
+          link: '#'
+          button_style: primary
+  features:
+    - label: Feature
+      icon: folder_special
+      value:
+        icon:
+        title:
+        text_html:
+
+# Array Defaults
+button_styles:
+  primary: Primary Button
+  secondary: Secondary Button
+sidebar_options:
+  full-width: Full Width
+  content-sidebar: Content / Sidebar
+  sidebar-content: Sidebar / Content
+
+# CloudCannon Options
+_options:
+  layout:
+    hidden: true
+  pagination:
+    hidden: true
+
+# CloudCannon Comment Defaults
+_comments:
+  title: Main headline of the page, also used in html title tag (required)
+  seo_title: Will overwrite the html title tag (not required)
+  description: Description text Google uses in search results
+  emails: Form recipients
+  email_subject: Form email subject
+  success_redirect_url: Load this page after a successful form submission
+  featured_image: Image used when sharing on Facebook (default image will be used if blank)
+  categories: Capitalize your categories (e.g. "Vacation Photos" "YouTube Video")
+  tags: Capitalize your tags (e.g. "Vacation Photos" "YouTube Video")
+  sidebar_option:
+  noindex: This tells Google (and other search engines) not to add this page to its index
+  permalink: Website address for this page
+  video_embed: Did you embed an video iframe?

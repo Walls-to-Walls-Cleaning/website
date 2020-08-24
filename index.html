@@ -3,16 +3,18 @@ layout: default
 title: Huntsville Cleaning Services
 seo_title:
 description: Commercial and residential cleaning services for the Huntsville and Madison Alabama area.
-intro_text: Commercial and residential cleaning services for the Huntsville and Madison Alabama area.
-intro_button_url:
-intro_button_text:
-intro_image: /uploads/chris-and-sasha-small.jpg
+intro_area:
+  text: Commercial and residential cleaning services for the Huntsville and Madison Alabama area.
+  button_url:
+  button_text:
+  image: /uploads/chris-and-sasha-small.jpg
+  image_alt_text:
 featured_image:
 page_blocks:
   - _id: entry_content
     entry_content:
       - image: /uploads/diluth-cleaning.jpg
-        title: Commercial Cleaning Services
+        content_title: Commercial Cleaning Services
         text_html: >-
           <p>Learn more about how we can help you with commercial janitorial services.</p>
         button:
@@ -20,7 +22,7 @@ page_blocks:
           link: '/commercial/'
           button_style: primary
       - image: /uploads/sink.jpg
-        title: Residential Cleaning Services
+        content_title: Residential Cleaning Services
         text_html: >-
           <p>A happy home is a clean home. Learn more about how we can help keep your home clean.</p>
         button:
@@ -30,23 +32,23 @@ page_blocks:
   - _id: features
     features:
       - icon: comments
-        title: Serve
+        feature_title: Serve
         text_html: >-
           <p>We believe it should be done your way. Our job is to make your life easier so you have time to enjoy what matters most. Let us know how we can serve you better!</p>
       - icon: shield-alt
-        title: Trust
+        feature_title: Trust
         text_html: >-
           <p>Cleaning is more personal than many services, we work to establish a dedicated Cleaning Specialist for your property. The cleaners coming into your home or business will treat your home and belongings with care and concern. You can trust us to leave your home better than we found it.</p>
       - icon: trophy
-        title: Excellence
+        feature_title: Excellence
         text_html: >-
           <p>We pride ourselves on a job well done, we want you to take pride in it too. Your recommendation is the best compliment we can receive. Our excellent service to you and your family is the only way to earn that compliment.</p>
       - icon: hourglass
-        title: Professionalism
+        feature_title: Professionalism
         text_html: >-
           <p>Your time is valuable. When you use your time preparing for us to clean, we take that seriously. We show up on time, ready to work. Getting our job done with efficiently and promptly gives you more time to do the things you love.</p>
       - icon: puzzle-piece
-        title: Community
+        feature_title: Community
         text_html: >-
           <p>We live and work here too. Helping to provide work opportunities and cleaning services builds the community. Giving back to the community not only betters others lives but gives us the opportunity to better ourselves.</p>
 permalink: /
@@ -58,11 +60,11 @@ _disable_title_filename_sync: true
   <header class="page__header">
     <div class="page__header-content">
       <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
-      {% if page.intro_text %}<p>{{ page.intro_text }}</p>{% endif %}
-      {% if page.intro_button_url %}<a class="button primary" href="{{ page.intro_button_url }}">{{ page.intro_button_text }}</a>{% endif %}
+      {% if page.intro_area.text %}<p>{{ page.intro_area.text }}</p>{% endif %}
+      {% if page.intro_area.button_url %}<a class="button primary" href="{{ page.intro_area.button_url }}">{{ page.intro_area.button_text }}</a>{% endif %}
     </div>
     <div class="page__header-image">
-      <img src="{{ page.intro_image }}" alt="{{ page.title }}">
+      <img src="{{ page.intro_area.image }}" alt="{% if page.intro_area.image_alt_text %}{{ page.intro_area.image_alt_text }}{% else %}{{ page.title }}{% endif %}">
     </div>
   </header>
 
@@ -74,9 +76,9 @@ _disable_title_filename_sync: true
             <div class="entry">
               <div class="entry__image background-image{% cycle '', ' reverse' %}" style="background-image:url('{{ entry.image }}')"></div>
               <div class="entry__content">
-                <h2>{{ entry.title }}</h2>
+                <h2>{{ entry.content_title }}</h2>
                 {{ entry.text_html }}
-                {% if entry.button.link %}<a href="{{ entry.button.link }}" class="button {{entry.button.button_style }}">{{ entry.button.text }}</a>{% endif %}
+                {% if entry.button.link %}<a href="{{ entry.button.link }}" class="button {{ entry.button.button_style }}">{{ entry.button.text }}</a>{% endif %}
               </div>
             </div>
           {% endfor %}
@@ -88,7 +90,7 @@ _disable_title_filename_sync: true
               <div class="icon">
                 {% include icons.html icon=feature.icon %}
               </div>
-              <h2>{{ feature.title }}</h2>
+              <h2>{{ feature.feature_title }}</h2>
               {{ feature.text_html }}
             </div>
           {% endfor %}
@@ -98,14 +100,14 @@ _disable_title_filename_sync: true
           <div class="cta__inner">
 
             <div class="cta__content">
-              <h2 class="cta__title">{{ block.title }}</h2>
+              <h2 class="cta__title">{{ block.cta_title }}</h2>
               {{ block.description_html }}
             </div>
 
             {% unless block.buttons == empty %}
               <div class="cta__actions">
                 {% for button in block.buttons %}
-                  <a href="{{ button.link }}" class="button large fit{% if button.button_style == 'primary' %} primary{% endif %}">{{ button.text }}</a>
+                  <a href="{{ button.link }}" class="button {% if button.button_style == 'primary' %} primary{% endif %}">{{ button.text }}</a>
                 {% endfor %}
               </div>
             {% endunless %}

@@ -40,7 +40,7 @@ _array_structures:
       icon: campaign
       value:
         _id: cta
-        title:
+        cta_title:
         description_html:
         buttons: []
   buttons:
@@ -55,7 +55,7 @@ _array_structures:
       icon: ballot
       value:
         image:
-        title:
+        content_title:
         text_html:
         button:
           text: Button Text
@@ -66,7 +66,7 @@ _array_structures:
       icon: folder_special
       value:
         icon:
-        title:
+        feature_title:
         text_html:
 
 # Array Defaults

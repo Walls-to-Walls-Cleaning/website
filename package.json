@@ -1,0 +1,23 @@
+{
+  "name": "threshold",
+  "description": "Threshold Template by WebNiyom",
+  "version": "0.3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/webniyom/bedrock"
+  },
+  "author": "Brad West",
+  "engines": {
+    "node": ">= 12.18.3"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "onchange": "^7.0.2",
+    "uglify-js": "^3.9.2"
+  },
+  "scripts": {
+    "watch": "onchange 'js/*.js' -- npm run uglify",
+    "uglify": "parallelshell 'uglifyjs js/cookie-notice.js --compress --mangle --toplevel --output _includes/js/cookie_notice.html' 'uglifyjs js/video-embeds.js --compress --mangle --toplevel --output _includes/js/video_embeds.html' 'uglifyjs js/navigation.js --compress --mangle --toplevel --output _includes/js/navigation.html' 'uglifyjs js/career-form.js --compress --mangle --toplevel --output _includes/js/career_form.html'",
+    "uglify:js-cookie": "uglifyjs node_modules/js-cookie/src/js.cookie.js --compress --mangle --output _includes/js/js_cookie.html"
+  }
+}

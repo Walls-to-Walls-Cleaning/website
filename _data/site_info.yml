@@ -3,11 +3,11 @@ site_description: The Help You Need To Keep It Clean.
 
 company_name: Walls Cleaning Service, LLC
 email: walls2wallscleaning@gmail.com
-phone_number: 256-224-2803
-secondary_phone:
+phone_numbers:
+  - '256-759-9196'
 address:
-  street1:
+  street1: 1403 Weatherly Plaza, Suite 104
   street2:
-  city:
-  state:
-  zip_code:
+  city: Huntsville
+  state: AL
+  zip_code: '35803'

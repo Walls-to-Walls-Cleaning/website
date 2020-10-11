@@ -1,38 +1,87 @@
 <footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
 
-  {% if site.data.footer_form.show_form %}
+  {% if site.data.footer.footer_form.show_form %}
     {% unless page.emails %}
 
-      <p class="site-footer__header">{{ site.data.footer_form.form_title }}</p>
+      <div class="form">
 
-      {{ site.data.footer_form.text_html }}
+        <p class="header">{{ site.data.footer.footer_form.form_title }}</p>
 
-      <form method="post" action="{{ site.data.footer_form.success_redirect_url }}">
+        {{ site.data.footer.footer_form.text_html }}
 
-        <div class="row">
-          <div class="one-half">
-            <label class="screen-reader-text">Name</label>
-            <input type="text" name="name" placeholder="Name" required>
+        <form method="post" action="{{ site.data.footer.footer_form.success_redirect_url }}">
+
+          <div class="row">
+            <div class="one-half">
+              <label class="screen-reader-text">Name</label>
+              <input type="text" name="name" placeholder="Name" required>
+            </div>
+            <div class="one-half">
+              <label class="screen-reader-text">Email Address</label>
+              <input type="text" name="email" placeholder="Email" required>
+            </div>
           </div>
-          <div class="one-half">
-            <label class="screen-reader-text">Email Address</label>
-            <input type="text" name="email" placeholder="Email" required>
-          </div>
-        </div>
 
-        <label class="screen-reader-text">Message</label>
-        <textarea name="message" rows="6" placeholder="Message"></textarea>
+          <label class="screen-reader-text">Message</label>
+          <textarea name="message" rows="6" placeholder="Message"></textarea>
 
-        <input type="hidden" name="_to" value="{{ site.data.footer_form.emails | join: ',' }}">
-        <input type="hidden" name="_subject" value="{{ site.data.footer_form.email_subject }}">
-        <input type="text" name="_gotcha" style="display: none;">
+          <input type="hidden" name="_to" value="{{ site.data.footer_form.emails | join: ',' }}">
+          <input type="hidden" name="_subject" value="{{ site.data.footer_form.email_subject }}">
+          <input type="text" name="_gotcha" style="display: none;">
 
-        <input class="primary" type="submit" value="Send Message">
-      </form>
+          <input class="primary" type="submit" value="Send Message">
+        </form>
+
+      </div>
 
     {% endunless %}
   {% endif %}
 
-  <p class="license" itemprop="license">{{ site.data.site_info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; {% if site.data.social.facebook.url %}<a class="social-icon" href="{{ site.data.social.facebook.url }}"><svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></svg></a> &middot;{% endif %} <a href="{{ '/terms-conditions/' | absolute_url }}">Terms and Conditions</a> &middot; <a href="https://webniyom.com" rel="nofollow">Built by WebNiyom</a></p>
+  {% unless site.data.footer.footer_widgets == nil %}
+    <div class="navigation">
+      {% for widget in site.data.footer.footer_widgets %}
+        {% case widget._id %}
+          {% when 'contact_info' %}
+            <div class="{% if forloop.length == 3 %}one-third{% elsif forloop.length == 4 %}one-fourth{% endif %}">
+              <p class="navigation__title">{{ widget.contact_widget_title }}</p>
+              <div class="navigation__list">
+                <p>{{ site.data.site_info.address.street1 }}</p>
+                {% if site.data.site_info.address.street2 %}<p>{{ site.data.site_info.address.street2 }}</p>{% endif %}
+                <p>{{ site.data.site_info.address.city }}, {{ site.data.site_info.address.state }} {{ site.data.site_info.address.zip_code }}</p>
+                {% for numbers in site.data.site_info.phone_numbers %}
+                  <p>{{ numbers }}</p>
+                {% endfor %}
+              </div>
+            </div>
+          {% when 'footer_widget_image' %}
+            <div class="{% if forloop.length == 3 %}one-third{% elsif forloop.length == 4 %}one-fourth{% endif %}">
+              <p class="navigation__title">{{ widget.footer_image_title }}</p>
+              <img src="{{ widget.footer_image }}" alt="{{ widget.footer_image_alt }}">
+            </div>
+          {% when 'navigation' %}
+            <div class="{% if forloop.length == 3 %}one-third{% elsif forloop.length == 4 %}one-fourth{% endif %}">
+              <p class="navigation__title">{{ widget.navigation_list_title }}</p>
+              <nav class="navigation__list">
+                {% for link in widget.navigation_links %}
+                  <a href="{{ link.link }}">{{ link.text }}</a>
+                {% endfor %}
+              </nav>
+            </div>
+          {% when 'newsletter_signup' %}
+            <div class="{% if forloop.length == 3 %}one-third{% elsif forloop.length == 4 %}one-fourth{% endif %}">
+              <p class="navigation__title">{{ widget.newsletter_signup_title }}</p>
+              {{ widget.newsletter_signup_text_html }}
+              <form class="newsletter-signup" action="{{ widget.newsletter_submission_url }}" method="post">
+                <label class="screen-reader-text" for="newsletter">{{ widget.newsletter_placeholder }}</label>
+                <input type="email" value="" id="newsletter" placeholder="{{ widget.newsletter_placeholder }}" name="" required>
+                <input type="submit" value="{{ widget.newsletter_button }}" id="subbutton">
+              </form>
+            </div>
+          {% endcase %}
+      {% endfor %}
+    </div>
+  {% endunless %}
+
+  <p class="license" itemprop="license">{{ site.data.site_info.company_name }} &copy; {{ site.time | date: "%Y" }} &middot; <a href="https://webniyom.com" rel="nofollow">Built by WebNiyom</a></p>
 
 </footer>

@@ -1,0 +1,25 @@
+footer_form:
+  show_form: false
+  form_title: Get in touch
+  text_html: >-
+    <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus ferment. Pellentesque a diam sit amet amet dolor ullamcorper vehicula. Lorem ipsum dolor sit amet dolor sit amet consequat.</p>
+  emails:
+    - walls2wallscleaning@gmail.com
+  email_subject: New Contact
+  success_redirect_url: /form-thank-you/
+footer_widgets:
+  - _id: contact_info
+    contact_widget_title: Contact Info
+  - _id: navigation
+    navigation_list_title: Navigation
+    navigation_links:
+      - text: Careers
+        link: '/careers/'
+      - text: Facebook
+        link: 'https://www.facebook.com/wallscleaningservices/'
+      - text: Terms and Conditions
+        link: '/terms-conditions/'
+  - _id: footer_widget_image
+    footer_image_title: Service Area
+    footer_image: '/images/image-alignment-150x150.jpg'
+    footer_image_alt: 'a map of areas we cover'

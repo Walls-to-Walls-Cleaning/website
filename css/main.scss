@@ -3,9 +3,7 @@
 ---
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import 'variables/font-family';
-@import 'variables/colors';
-@import 'variables/typography';
+@import 'variables';
 @import 'grid-breakpoints';
 @import 'mixins';
 @import 'utilities';
@@ -26,4 +24,3 @@
 @import 'sidebar';
 @import 'footer';
 @import 'cookie-notice';
-@import 'custom/footer'

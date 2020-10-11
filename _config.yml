@@ -9,8 +9,25 @@ production:
 # Site Language
 locale:
 
-# Theme Settings
-theme: threshold
+# Jekyll Configuration
+encoding: UTF-8
+permalink: /:title/
+
+# Markdown Processing
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Sass/SCSS Settings
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+# Collections
+collections:
+  careers:
+    output: true
+    # permalink: /careers/:path/
 
 # Collection Defaults
 defaults:
@@ -20,6 +37,10 @@ defaults:
       layout: post
   - scope:
       type: pages
+    values:
+      layout: page
+  - scope:
+      type: careers
     values:
       layout: page
 
@@ -43,6 +64,34 @@ _array_structures:
         cta_title:
         description_html:
         buttons: []
+  footer_widgets:
+    - label: Contact Info
+      icon: contact_page
+      value:
+        _id: contact_info
+        contact_widget_title:
+    - label: Image
+      icon: insert_photo
+      value:
+        _id: footer_widget_image
+        footer_image_title:
+        footer_image:
+        footer_image_alt:
+    - label: Navigation
+      icon: list
+      value:
+        _id: navigation
+        navigation_list_title:
+        navigation_links: []
+    - label: Newsletter
+      icon: email
+      value:
+        _id: newsletter_signup
+        newsletter_signup_title:
+        newsletter_signup_html:
+        newsletter_placeholder:
+        newsletter_button:
+        newsletter_submission_url:
   buttons:
     - label: Button
       icon: link
@@ -68,6 +117,12 @@ _array_structures:
         icon:
         feature_title:
         text_html:
+  navigation_links:
+    - label: Link
+      icon: link
+      value:
+        text: List Item
+        link: '#'
 
 # Array Defaults
 button_styles:
@@ -77,6 +132,15 @@ sidebar_options:
   full-width: Full Width
   content-sidebar: Content / Sidebar
   sidebar-content: Sidebar / Content
+
+# Autoprefixer Plugin Settings - https://github.com/vwochnik/jekyll-autoprefixer
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: true
+
+# File Handling
+exclude: [.sass-cache, .jekyll-cache, Rakefile, README.md, LICENSE.md, package.json, package-lock.json, '*.gem', '*.gemspec', js/]
 
 # CloudCannon Options
 _options:
@@ -97,6 +161,51 @@ _comments:
   categories: Capitalize your categories (e.g. "Vacation Photos" "YouTube Video")
   tags: Capitalize your tags (e.g. "Vacation Photos" "YouTube Video")
   sidebar_option:
-  noindex: This tells Google (and other search engines) not to add this page to its index
+  noindex: This tells Google (and other search engines) not to add this page to their index
+  dont_track: This tell your analytics program to NOT track this page
   permalink: Website address for this page
   video_embed: Did you embed an video iframe?
+
+# Plugin: Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/page-:num/'
+  title: ':title — Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 6
+    after: 6
+
+# Plugin: Auto Pages (Archives) (jekyll-paginate-v2)
+autopages:
+  enabled: true
+  tags:
+    enabled: true
+    slugify:
+      mode: raw
+      cased: true
+    layouts:
+      - "archive.html"
+    title: ":tag Topic Archive" # :tag is replaced by the tag name
+    permalink: "/tag/:tag/"
+  categories:
+    enabled: true
+    slugify:
+      mode: raw
+      cased: true
+    layouts:
+      - "archive.html"
+    title: ":cat Topic Archive" # :cat is replaced by the category name
+    permalink: "/category/:cat/"
+  collections:
+    enabled: true
+    slugify:
+      mode: raw
+      cased: true
+    layouts:
+      - "careers-archive.html"
+    title: "Careers" # :coll is replaced by the collection name
+    permalink: "/:coll/"

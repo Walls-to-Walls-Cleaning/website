@@ -1,0 +1,32 @@
+.page,
+.post {
+  @include breakpoint(lg) {
+    margin-bottom: 12rem;
+  }
+}
+
+.page__header {
+  margin-bottom: 6.875rem;
+  text-align: center;
+}
+
+.page__title {
+  margin-top: 0;
+  font-size: $h2-font-size;
+  @include breakpoint(sm) {
+    font-size: ($h2-font-size * 1.3);
+  }
+  @include breakpoint(md) {
+    font-size: $h1-font-size;
+  }
+}
+
+.page__meta span {
+  display: block;
+}
+
+.page__footer {
+  margin-top: ($spacer * 2);
+  border-top: .125rem solid $border-color;
+  padding-top: ($spacer * 2);
+}

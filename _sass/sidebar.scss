@@ -1,0 +1,23 @@
+.sidebar {
+
+  ul {
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: ($spacer / 2);
+    border-bottom: .05rem dotted #ddd;
+    padding-bottom: ($spacer / 2);
+  }
+
+  p:last-child,
+  ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+  .widget {
+    margin-bottom: ($spacer * 2);
+    background-color: #fff;
+  }
+
+}

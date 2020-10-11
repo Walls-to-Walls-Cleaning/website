@@ -1,0 +1,21 @@
+{% comment %} Add navigation toggler {% endcomment %}
+<script>{% include js/navigation.html %}</script>
+
+
+{% comment %} Find iframes and wrap them with iframe-embed div {% endcomment %}
+{% if page.video_embed %}
+  <script>{% include js/video_embeds.html %}</script>
+{% endif %}
+
+
+{% comment %} Add cookies for cookie notice {% endcomment %}
+{% if site.data.cookie_notice.display_cookie_notice == true %}
+  <script>{% include js/js_cookie.html %}</script>
+  <script>{% include js/cookie_notice.html %}</script>
+{% endif %}
+
+
+{% comment %} Add career form toggler {% endcomment %}
+{% if page.collection == 'careers' %}
+  <script>{% include js/career_form.html %}</script>
+{% endif %}

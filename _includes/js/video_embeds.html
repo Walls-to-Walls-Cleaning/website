@@ -1,0 +1,1 @@
+HTMLElement.prototype.wrap=function(e){e.length||(e=[e]);for(var t=e.length-1;0<=t;t--){var n=0<t?this.cloneNode(!0):this,a=e[t],r=a.parentNode,d=a.nextSibling;n.appendChild(a),d?r.insertBefore(n,d):r.appendChild(n)}};var e=document.getElementsByTagName("iframe"),t=document.createElement("div");t.classList.add("iframe-embed"),t.wrap(e);

@@ -1,0 +1,21 @@
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    <ul role="navigation" aria-label="Pagination">
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | replace: '//', '/' }}"><span class="screen-reader-text">Go to page</span> &laquo; Prev Page</a></li>
+      {% endif %}
+
+      {% for trail in paginator.page_trail %}
+        {% if page.url == trail.path %}
+          <li class="active">{{ trail.num }}</li>
+        {% else %}
+          <li><a href="{{ trail.path | replace: 'index.html', '' }}"><span class="screen-reader-text">Go to page</span>{{ trail.num }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | replace: '//', '/' }}"><span class="screen-reader-text">Go to page</span> Next Page &raquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
+{% endif %}

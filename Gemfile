@@ -1,4 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'threshold', git: 'https://oauth2:W4N6hVuwEkz99g9yQBGb@gitlab.com/webniyom/threshold-template.git'
-# gem 'threshold', path: '/home/brad/Projects/webniyom/templates/threshold/'
+gem 'jekyll'
+
+group :jekyll_plugins do
+  gem 'jekyll-feed'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-paginate-v2'
+  gem 'jekyll-autoprefixer'
+end

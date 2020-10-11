@@ -1,24 +1,13 @@
-GIT
-  remote: https://oauth2:W4N6hVuwEkz99g9yQBGb@gitlab.com/webniyom/threshold-template.git
-  revision: 027562b6ccf28de8f1069c0da138a6623b8c9252
-  specs:
-    threshold (0.2.1)
-      jekyll (~> 4.1.1)
-      jekyll-autoprefixer (~> 1.0.2)
-      jekyll-feed (~> 0.15.0)
-      jekyll-paginate-v2 (~> 3.0.0)
-      jekyll-sitemap (~> 1.4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.8.6.2)
+    autoprefixer-rails (9.8.6.5)
       execjs
     colorator (1.1.0)
     concurrent-ruby (1.1.7)
-    em-websocket (0.5.1)
+    em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
@@ -45,7 +34,7 @@ GEM
       terminal-table (~> 1.8)
     jekyll-autoprefixer (1.0.2)
       autoprefixer-rails (~> 9.3)
-    jekyll-feed (0.15.0)
+    jekyll-feed (0.15.1)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
@@ -66,12 +55,12 @@ GEM
     mercenary (0.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.4)
-    rouge (3.22.0)
+    rouge (3.23.0)
     safe_yaml (1.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -83,7 +72,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  threshold!
+  jekyll
+  jekyll-autoprefixer
+  jekyll-feed
+  jekyll-paginate-v2
+  jekyll-sitemap
 
 BUNDLED WITH
    2.1.4

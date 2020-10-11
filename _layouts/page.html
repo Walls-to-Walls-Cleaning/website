@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+
+  <header class="page__header">
+    <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+    {% if page.intro_text %}<p>{{ page.intro_text }}</p>{% endif %}
+  </header>
+
+  <div class="page__content" itemprop="text">
+
+    {% if page.collection == 'careers' %}{% include careers_form.html %}{% endif %}
+
+    {{ content }}
+  </div>
+
+</article>

@@ -171,14 +171,8 @@
 // Responsive Menu
 .responsive-menu-icon {
   display: flex;
-  // justify-content: center;
   align-items: center;
   align-self: center;
-  // z-index: 999;
-  // margin-right: auto;
-  // margin-bottom: 1rem;
-  // margin-left: auto;
-  // cursor: pointer;
   font-size: .8rem;
   @include breakpoint(md) {
     display: none;
@@ -203,10 +197,11 @@
   @include breakpoint(md) {
     display: inline-flex;
     visibility: visible;
-    width: 1.5rem;
+    margin-right: .7rem;
+    width: 1rem;
     border: 0;
     background: transparent;
-    padding: 0 .7rem 0 0;
+    padding: 0;
     vertical-align: middle;
     color: $body-text-color;
   }
@@ -214,11 +209,13 @@
   &:hover {
     box-shadow: unset;
     background-color: transparent;
+    color: $body-text-color;
   }
 
   svg {
     transform: rotate(0deg);
     transition: transform .2s ease-in-out;
+    width: 1rem;
   }
 
   &.expanded svg {

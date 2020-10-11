@@ -12,7 +12,7 @@ document.getElementById('career-apply-button').addEventListener('click', functio
     careerForm.setAttribute('data-collapsed', 'false');
 
     // mark Aria toggle button expanded as true
-    document.querySelector('.career-apply-button').setAttribute('aria-expanded', 'true');
+    document.getElementById('career-apply-button').setAttribute('aria-expanded', 'true');
 
     // set data-collapsed to false
     careerForm.setAttribute('data-collapsed', 'false');
@@ -41,6 +41,6 @@ document.getElementById('career-apply-button').addEventListener('click', functio
     careerForm.setAttribute('data-collapsed', 'true');
 
     // mark Aria toggle button expanded as false
-    document.querySelector('.career-apply-button').setAttribute('aria-expanded', 'false');
+    document.getElementById('career-apply-button').setAttribute('aria-expanded', 'false');
   }
 });

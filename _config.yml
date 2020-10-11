@@ -140,7 +140,7 @@ autoprefixer:
   only_production: true
 
 # File Handling
-exclude: [.sass-cache, .jekyll-cache, Rakefile, README.md, LICENSE.md, package.json, package-lock.json, '*.gem', '*.gemspec', js/]
+exclude: [.sass-cache, .jekyll-cache, Rakefile, README.md, LICENSE.md, package.json, package-lock.json, '*.gem']
 
 # CloudCannon Options
 _options:

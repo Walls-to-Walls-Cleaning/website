@@ -9,5 +9,7 @@ group :jekyll_plugins do
   gem 'jekyll-autoprefixer'
 end
 
+gem 'execjs', '2.7'
+
 # Add webrick gem for local development
 gem 'webrick'

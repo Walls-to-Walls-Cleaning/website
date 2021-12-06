@@ -4,11 +4,16 @@ seo_title:
 description:
 featured_image:
 intro_text:
+emails:
+  - walls2wallscleaning@gmail.com
+  - sales@walls2wallscleaning.com
+email_subject: New Contact
+success_redirect_url: /form-thank-you/
 permalink: /contact/
 _disable_title_filename_sync: true
 ---
 
-<form class="form" method="POST" action="https://formspree.io/f/xoqyeznn">
+<form class="form" method="POST" action="{{ page.success_redirect_url }}">
 
   <label class="text-bold" for="name-first">Name <span class="required">*</span></label>
   <div class="row mb-1">
@@ -33,6 +38,10 @@ _disable_title_filename_sync: true
 
   <label class="text-bold" for="message">Message</label>
   <textarea rows="8" id="message" class="w-100 mb-2" name="message"></textarea>
+
+  <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
+  <input type="hidden" name="_subject" value="{{ page.email_subject }}">
+  <input type="text" name="_gotcha" style="display: none;">
 
   <input class="primary" type="submit" value="Send Message">
 </form>

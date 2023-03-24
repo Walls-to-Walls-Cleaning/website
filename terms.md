@@ -5,7 +5,6 @@ description:
 featured_image:
 permalink: /terms-conditions/
 ---
-
 **Walls Cleaning Service**
 
 * is licensed, insured and bonded.
@@ -95,7 +94,7 @@ Breakage and damage Form
 
 Office Hours: 8-5
 
-1403 Weatherly Plaza, Suite 104<br>Huntsville, AL 35803
+1317 Virginia Blvd Huntsville, AL 35801
 
 Holidays - No Business Conducted on the following Days
 
